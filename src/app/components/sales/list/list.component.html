@@ -1,0 +1,22 @@
+<h2>Lista de Clientes</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>date</th>
+      <th>total</th>
+        <th>client</th>
+        <th></th>
+      <th style="width: 50px"></th>
+      <th style="width: 50px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sale of sales ">
+      <td>{{sale.order}}</td>
+      <td>{{sale.date | date}}</td>
+      <td>{{sale.total}}</td>
+        <td>{{sale.client.name}}</td>
+    </tr>
+  </tbody>
+</table>
