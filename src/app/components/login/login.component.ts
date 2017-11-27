@@ -23,7 +23,7 @@ ngOnInit() {
  
 onLogin(){
   if(this.user){
-    this.userService.login(this.user, this.password);
+    this.userService.login(this.user);
     this.isLogedin = this.userService.isLogedin();
     this.router.navigateByUrl("/home");
   }

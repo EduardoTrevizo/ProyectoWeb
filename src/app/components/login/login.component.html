@@ -1,6 +1,6 @@
-
-    
-<div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+<div class="container">    
+        
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
         
         <div class="row">                
             <div class="iconmelon">
@@ -11,10 +11,9 @@
               </svg>
             </div>
         </div>
-        
-        <div class="panel panel-default" >
+       <div class="panel panel-default" >
             <div class="panel-heading">
-                <div class="panel-title text-center">Insta-Horario</div>
+                <div class="panel-title text-center">Iniciar Sesion</div>
             </div>     
 
             <div class="panel-body" >
@@ -23,24 +22,30 @@
                    
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" class="form-control" name="user" value="" placeholder="User">                                        
+                        <form class="example-full-width">
+          <input placeholder="Usuario" name="user" [(ngModel)]="user" >
+        </form>                                       
                     </div>
 
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                        <form class="example-full-width">
+          <input placeholder="Contraseña" name="password" [(ngModel)]="password" >
+        </form>
                     </div>                                                                  
 
-                    <div class="form-group">    
+                    <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">
-                            <input type="button" value="Login" onclick = "location='index.html'"/>                    
+                                 <button md-raised-button color="primary" (click)="onLogin()">Iniciar Sesion</button>                       
                         </div>
                     </div>
-                    
+
                 </form>     
 
             </div>                     
         </div>  
     </div>
+</div>
 
+   
