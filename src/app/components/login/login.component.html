@@ -1,51 +1,49 @@
-<div class="container">    
-        
-    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
-        
-        <div class="row">                
-            <div class="iconmelon">
-              <svg viewBox="0 0 32 32">
-                <g filter="">
-                  <use xlink:href="#git"></use>
-                </g>
-              </svg>
-            </div>
-        </div>
-       <div class="panel panel-default" >
-            <div class="panel-heading">
-                <div class="panel-title text-center">Iniciar Sesion</div>
-            </div>     
+<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-            <div class="panel-body" >
-
-                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
-                   
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <form class="example-full-width">
-          <input placeholder="Usuario" name="user" [(ngModel)]="user" >
-        </form>                                       
-                    </div>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <form class="example-full-width">
-          <input placeholder="Contraseña" name="password" [(ngModel)]="password" >
-        </form>
-                    </div>                                                                  
-
-                    <div class="form-group">
-                        <!-- Button -->
-                        <div class="col-sm-12 controls">
-                                 <button md-raised-button color="primary" (click)="onLogin()">Iniciar Sesion</button>                       
-                        </div>
-                    </div>
-
-                </form>     
-
-            </div>                     
-        </div>  
-    </div>
+<body>
+<div class="middlePage">
+<div class="page-header">
+  <h1 class="logo">Proyecto Final WEB <small>Adrian Alarcon.</small></h1>
 </div>
 
-   
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Por favor, inicia sesión</h3>
+  </div>
+  <div class="panel-body">
+  
+  <div class="row">
+  
+<div class="col-md-5" >
+    <br>
+<button href="#" class="btn btn-block btn-social btn-facebook btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+<button href="#" class="btn btn-block btn-danger"><i class="fa fa-google"></i> Google</button>
+<button href="#" class="btn btn-block btn-info btn-linkedin"><i class="fa fa-linkedin"></i> Linkedin</button>
+
+      </div><br>
+
+    <div class="col-md-7" style="border-left:1px solid #ccc;height:160px">
+<form class="form-horizontal">
+<fieldset>
+
+  <input id="textinput" name="textinput" type="text" placeholder="Usuario pls" class="form-control input-md" [(ngModel)]="user" >
+  <br><br>
+  <input id="textinput" name="textinput" type="text" placeholder="Contraseña" class="form-control input-md" [(ngModel)]="password">
+<br>
+  <button id="singlebutton" name="singlebutton" class="btn btn-info btn-sm pull-right" (click)="onLogin()">Entrar!</button>
+
+
+</fieldset>
+</form>
+</div>
+    
+</div>
+    
+</div>
+</div>
+
+<p><a href="https://github.com/EduardoTrevizo/ProyectoWeb">Proyecto</a> · Cristian | Eduardo · </p>
+
+</div>
+</body>

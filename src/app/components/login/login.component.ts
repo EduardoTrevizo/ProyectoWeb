@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user/users.service';
-import {Router} from '@angular/router';
+import { UsersService } from '../../services/users/users.service';
+import {Router, ActivatedRoute} from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,20 +10,20 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user: any;
+user: any;
 password: any;
 isLogedin: boolean;
+
+  constructor(  
+  private userService: UsersService,
+  private router: Router) {}
+
+  ngOnInit() {
+    this.isLogedin = this.userService.isLogedin();
  
-constructor(
-  private userService: UserService,
-  private router: Router) {
   }
- 
-ngOnInit() {
-  this.isLogedin = this.userService.isLogedin();
-}
- 
-onLogin(){
+  
+  onLogin(){
   if(this.user){
     this.userService.login(this.user);
     this.isLogedin = this.userService.isLogedin();
