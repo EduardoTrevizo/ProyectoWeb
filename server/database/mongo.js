@@ -2,9 +2,9 @@ const MongoClient   = require('mongodb').MongoClient;
 const ObjectID      = require('mongodb').ObjectID;
 const q             = require("q");
 
-const url = 'mongodb://localhost/sales';
+//const url = 'mongodb://localhost/sales';
 //const url = 'mongodb://localhost:27017/app';
-//mongodb://eduardotrevizo:<PASSWORD>@cluster0-shard-00-00-rvlih.mongodb.net:27017,cluster0-shard-00-01-rvlih.mongodb.net:27017,cluster0-shard-00-02-rvlih.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+ mongodb:eduardotrevizo:Eddytrevizo10@cluster0-shard-00-00-rvlih.mongodb.net:27017,cluster0-shard-00-01-rvlih.mongodb.net:27017,cluster0-shard-00-02-rvlih.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin;
 // Connect
 const connection = (closure) => {
     return MongoClient.connect(url, (err, db) => {
