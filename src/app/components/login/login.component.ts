@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../../services/users/users.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import { UsersService } from '../../services/user/users.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -15,7 +15,7 @@ password: any;
 isLogedin: boolean;
 
   constructor(  
-  private userService: UsersService,
+  private userService: UserService,
   private router: Router) {}
 
   ngOnInit() {
