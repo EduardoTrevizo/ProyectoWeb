@@ -9,12 +9,11 @@ import { SalesService } from '../../services/sales/sales.service';
 export class SalesComponent implements OnInit {
 
 order: Array<any>;
-  constructor(private salesService: SalesService) {
-    
-    this.order = this.salesService.sales;
-}
+  constructor(private salesService: SalesService) {}
 
   ngOnInit() {
+        
+    this.order = this.salesService.sales;
   }
 
 }
