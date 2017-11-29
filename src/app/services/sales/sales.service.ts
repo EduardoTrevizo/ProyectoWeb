@@ -43,6 +43,7 @@ sales: any = [
   insertOne(obj){return this.http.post('/api/sales', obj);}
   //OnDeleteind(obj){return this.http.delete('/api/sales', obj);}
   deleteOne(id){return this.http.delete('/api/sales/' + id);}
+  findbyname(search){return this.http.get('/api/client/' + search)};
   
 
 }
