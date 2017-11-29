@@ -23,11 +23,28 @@ isLogedin: boolean;
  
   }
   
-  onLogin(){
-  if(this.user){
-    this.userService.login(this.user);
-    this.isLogedin = this.userService.isLogedin();
-    this.router.navigateByUrl("/home");
+onLogin() {
+    console.log("onlogin", this.user, this.password);
+    if (this.user) {
+      this.userService.login(this.user, this.password).subscribe((res: any) => {
+        console.log('resultado:', res.body);
+        
+        if (res.body){
+          this.userService.user = res.body[0].email;
+          this.userService.logedin = true;
+          this.userService.userChanges.emit();
+          this.router.navigateByUrl("/home");
+          }
+        
+        else{
+          this.userService.user = '';
+          this.userService.logedin = false;
+          this.userService.userChanges.emit();
+        }
+
+      });
+    
+    
   }
 }
 
