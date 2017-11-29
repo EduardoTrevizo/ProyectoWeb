@@ -32,6 +32,13 @@ action: string = "default";
       this.item = item;
       this.action = "edit";
     }
+  updateproducts(search){
+    console.log(search);
+        this.inventoryService.findbyname(search).subscribe((res:any) => {
+        this.items = res.body;
+        console.log(res.body);});
+      }
+    }
     onCreate(){
       this.item = {id: "", name: "", brand: "", provider: "", quantity: "", price: ""};
       this.action = "create";
