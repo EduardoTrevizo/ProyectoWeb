@@ -32,7 +32,7 @@ action: string = "default";
       this.item = item;
       this.action = "edit";
     }
-  updateproducts(search){
+  updateProducts(search){
     console.log(search);
         this.inventoryService.findbyname(search).subscribe((res:any) => {
         this.items = res.body;
