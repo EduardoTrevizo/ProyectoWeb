@@ -1,3 +1,4 @@
+import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -36,5 +37,12 @@ sales: any = [
     ],
   }
 ];
+
+ 
+  find(){return this.http.get('/api/sales', obj);}
+  insertOne(obj){return this.http.post('/api/sales', obj);}
+  //OnDeleteind(obj){return this.http.delete('/api/sales', obj);}
+  deleteOne(id){return this.http.delete('/api/sales/' + id);}
+  
 
 }
