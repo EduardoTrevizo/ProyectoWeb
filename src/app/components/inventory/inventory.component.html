@@ -29,7 +29,9 @@
         </tr>
       </tbody>
     </table>
-
+    <p> BUSCAR! </p>
+    <input type="text" placeholder="Buscar en Inventario..." name="filtroBuscar" id="filtroBuscar" [(ngModel)]="filtroBuscar">
+    <td><button type="button" class="btn btn-sm btn-warning"  (click)="updateProducts(filtroBuscar)"></button></td>
     <div id="clientModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="clientModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
